@@ -9,3 +9,6 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "Mona"
+      - name: Debugging with tmate on alpine
+        uses: cmosh/action-tmate@v2
+    
