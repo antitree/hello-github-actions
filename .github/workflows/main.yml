@@ -1,8 +1,14 @@
 name: A workflow for my Hello World file
 on: push
 jobs:
-  debug:
+  debuglinux:
     runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  debugmac:
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Setup tmate session
